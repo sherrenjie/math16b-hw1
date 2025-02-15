@@ -6,8 +6,7 @@ import math
 
 def quadratic_sum(num_a, num_b, num_c):
     """Computes (a + b + c)^2 using the identity formula.""" 
-    summation_result = (num_a + num_b + num_c) ** 2
-    return summation_result
+    return (num_a + num_b + num_c) ** 2
 
 def geometric_mean(val_x, val_y):
     """Computes the geometric mean of two numbers."""
@@ -43,21 +42,12 @@ def reverse_concat(str_one, str_two):
 
 def digit_sum(num_value):
     """Computes the sum of digits of an integer."""
-    absolute_value = abs(num_value)
-    digit_list = [int(digit) for digit in str(absolute_value)]
-    sum_of_digits = sum(digit_list)
-    return sum_of_digits
+    return sum(int(digit) for digit in str(abs(num_value)))
 
 def char_from_number(code_value):
     """Returns the ASCII character for a number between 32 and 126."""
-    if 32 <= code_value <= 126:
-        character_result = chr(code_value)
-        return character_result
-    return None
+    return chr(code_value) if 32 <= code_value <= 126 else None
 
 def concat_squares(num_m, num_n):
     """Concatenates the squares of two numbers as a string."""
-    square_m = num_m ** 2
-    square_n = num_n ** 2
-    concatenated_result = str(square_m) + str(square_n)
-    return concatenated_result
+    return str(num_m ** 2) + str(num_n ** 2)
